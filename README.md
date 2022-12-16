@@ -61,14 +61,16 @@ to authenticate to Docker Hub, because Github Packages already did that for me.
 
 ## How to use the packages?
 
-See the **Packages** section on the right of the repository, click it.
+See the **[Packages](https://github.com/users/aldy505/packages?repo_name=continuous-integration-images)** 
+section on the right of the repository, click it.
 
 Then just use it, without any settings. If there are authentication,
 there should be a note on the `README.md` of each directory.
 
 ## I want to add another package, yet I'm also lazy on maintaining it.
 
-Sure, submit a PR that supply a `Dockerfile` and a Github Action workflow file 
+Sure, submit a PR that supply a `Dockerfile` and a
+[Github Action workflow file](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) 
 (inside the `.github/workflows` directory). I'll take a look and merge it.
 
 ## License

@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: typesense-ci
+  IMAGE_NAME: aldy505/typesense-ci
 
 jobs:
   build:

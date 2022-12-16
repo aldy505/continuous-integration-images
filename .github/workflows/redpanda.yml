@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: redpanda-ci
+  IMAGE_NAME: aldy505/redpanda-ci
 
 jobs:
   build:

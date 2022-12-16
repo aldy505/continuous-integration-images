@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: minio-ci
+  IMAGE_NAME: aldy505/minio-ci
 
 jobs:
   build:
