@@ -32,7 +32,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/aldy505-clickhouse-node1
+          images: ghcr.io/aldy505/clickhouse-node1
           flavor: |
             latest=true
           tags: |
@@ -72,7 +72,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/aldy505-clickhouse-node2
+          images: ghcr.io/aldy505/clickhouse-node2
           flavor: |
             latest=true
           tags: |
@@ -112,7 +112,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/aldy505-clickhouse-node3
+          images: ghcr.io/aldy505/clickhouse-node3
           flavor: |
             latest=true
           tags: |
