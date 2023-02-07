@@ -1,0 +1,128 @@
+name: ClickHouse
+
+on:
+  push:
+    branches:
+      - master
+
+
+jobs:
+  node1:
+    name: Node 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ghcr.io/aldy505-clickhouse-node1
+          flavor: |
+            latest=true
+          tags: |
+            type=sha
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: "{{defaultContext}}:clickhouse-node1"
+          file: "{{defaultContext}}/Dockerfile.node1"
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  node2:
+    name: Node 2
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ghcr.io/aldy505-clickhouse-node2
+          flavor: |
+            latest=true
+          tags: |
+            type=sha
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: "{{defaultContext}}:clickhouse-node2"
+          file: "{{defaultContext}}/Dockerfile.node2"
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  node3:
+    name: Node 3
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ghcr.io/aldy505-clickhouse-node3
+          flavor: |
+            latest=true
+          tags: |
+            type=sha
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: "{{defaultContext}}:clickhouse-node3"
+          file: "{{defaultContext}}/Dockerfile.node3"
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

@@ -1,0 +1,6 @@
+<clickhouse>
+    <macros replace="replace">
+        <cluster>ci_cluster</cluster>
+        <replica>clickhouse_node1</replica>
+    </macros>
+</clickhouse>
