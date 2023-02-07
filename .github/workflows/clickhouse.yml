@@ -42,7 +42,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: "{{defaultContext}}:clickhouse-node1"
-          file: "{{defaultContext}}/Dockerfile.node1"
+          file: "Dockerfile.node1"
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -82,7 +82,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: "{{defaultContext}}:clickhouse-node2"
-          file: "{{defaultContext}}/Dockerfile.node2"
+          file: "Dockerfile.node2"
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -122,7 +122,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: "{{defaultContext}}:clickhouse-node3"
-          file: "{{defaultContext}}/Dockerfile.node3"
+          file: "Dockerfile.node3"
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
