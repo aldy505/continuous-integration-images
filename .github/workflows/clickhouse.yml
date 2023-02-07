@@ -41,7 +41,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
-          context: "{{defaultContext}}:clickhouse-node1"
+          context: "{{defaultContext}}:clickhouse"
           file: "Dockerfile.node1"
           push: true
           tags: ${{ steps.meta.outputs.tags }}
@@ -81,7 +81,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
-          context: "{{defaultContext}}:clickhouse-node2"
+          context: "{{defaultContext}}:clickhouse"
           file: "Dockerfile.node2"
           push: true
           tags: ${{ steps.meta.outputs.tags }}
@@ -121,7 +121,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
-          context: "{{defaultContext}}:clickhouse-node3"
+          context: "{{defaultContext}}:clickhouse"
           file: "Dockerfile.node3"
           push: true
           tags: ${{ steps.meta.outputs.tags }}
