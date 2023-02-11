@@ -4,8 +4,4 @@ COPY local.xml /etc/clickhouse-server/config.d/local.xml
 
 COPY macros2.xml /etc/clickhouse-server/config.d/macros.xml
 
-COPY wait-for-it.sh /wait-for-it.sh
-
-RUN chmod +x wait-for-it.sh
-
-COPY wait-zookeeper.sh /docker-entrypoint-initdb.d/wait-zookeeper.sh
+COPY keeper2.xml /etc/clickhouse-server/config.d/keeper.xml

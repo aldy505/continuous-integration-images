@@ -1,7 +1,7 @@
 # ClickHouse
 
-Zookeper is required for running the cluster. If you'd like to only run a single node of ClickHouse,
-please use the ClickHouse image directly.
+If you'd like to only run a single node of ClickHouse, please use the ClickHouse image directly.
+These images does not requires Zookeeper.
 
 Github Actions workflow file sample:
 
@@ -15,17 +15,8 @@ jobs:
   job-name:
     name: Job Name
     services:  
-      zookeeper:
-        image: zookeeper:3.8.0
-        options: >-
-          --health-cmd "nc -nz 127.0.0.1 2181"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 10
-          --health-start-period 30s
-          --hostname zookeeper
       clickhouse_node1:
-        image: ghcr.io/aldy505-clickhouse-node1
+        image: ghcr.io/aldy505/clickhouse-node1
         options: >-
           --health-cmd "wget --spider -q localhost:8123/ping"
           --health-interval 15s
@@ -35,12 +26,12 @@ jobs:
           --hostname clickhouse_node1
           --restart on-failure:10
       clickhouse_node2:
-        image: ghcr.io/aldy505-clickhouse-node2
+        image: ghcr.io/aldy505/clickhouse-node2
         options: >-
           --hostname clickhouse_node2
           --restart on-failure:10
       clickhouse_node3:
-        image: ghcr.io/aldy505-clickhouse-node3
+        image: ghcr.io/aldy505/clickhouse-node3
         options: >-
           --hostname clickhouse_node3
           --restart on-failure:10
