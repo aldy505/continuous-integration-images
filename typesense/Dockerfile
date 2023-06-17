@@ -1,4 +1,4 @@
-FROM typesense/typesense:0.24.0
+FROM typesense/typesense:0.24.1
 
 RUN apt-get update && \
     apt-get upgrade -y && \
