@@ -5,7 +5,7 @@ How to use this image:
 jobs:
   job_name:
     services:
-      redpanda: # YES, the name MUST BE "redpanda"
+      redpanda:
         image: ghcr.io/aldy505/redpanda-ci:latest
         options: >-
           --health-cmd "rpk cluster health"
