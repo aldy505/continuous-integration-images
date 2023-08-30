@@ -1,4 +1,4 @@
-FROM clickhouse/clickhouse-server:23.4.2.11
+FROM clickhouse/clickhouse-server:23.5.5.92
 
 COPY local.xml /etc/clickhouse-server/config.d/local.xml
 

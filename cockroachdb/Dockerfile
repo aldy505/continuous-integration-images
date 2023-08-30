@@ -1,3 +1,3 @@
-FROM cockroachdb/cockroach:v23.1.3
+FROM cockroachdb/cockroach:v23.1.8
 
 CMD [ "start-single-node", "--insecure", "--accept-sql-without-tls" ]
