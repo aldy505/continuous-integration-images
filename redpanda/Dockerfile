@@ -1,4 +1,4 @@
-FROM docker.redpanda.com/vectorized/redpanda:v23.2.7
+FROM docker.redpanda.com/vectorized/redpanda:v23.2.17
 
 WORKDIR /
 
