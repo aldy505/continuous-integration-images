@@ -1,4 +1,4 @@
-FROM minio/minio:RELEASE.2023-12-07T04-16-00Z
+FROM minio/minio:RELEASE.2023-12-14T18-51-57Z-cpuv1
 
 RUN mkdir -p /data
 
