@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/mssql/server:2022-latest
+FROM mcr.microsoft.com/mssql/server:2022-CU16-ubuntu-20.04
 
 RUN openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql' -addext "subjectAltName = DNS:mssql" -keyout /etc/ssl/private/mssql.key -out /etc/ssl/certs/mssql.pem -days 7
 RUN chmod 400 /etc/ssl/private/mssql.key
