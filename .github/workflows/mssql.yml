@@ -1,4 +1,4 @@
-name: Consul
+name: MSSQL
 
 on:
   push:
