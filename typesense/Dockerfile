@@ -1,4 +1,4 @@
-FROM typesense/typesense:0.26.0.rc39
+FROM typesense/typesense:29.0
 
 RUN apt-get update && \
     apt-get upgrade -y && \
