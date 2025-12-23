@@ -2,7 +2,7 @@ FROM clickhouse/clickhouse-server:25.3.7.194-alpine
 
 COPY local.xml /etc/clickhouse-server/config.d/local.xml
 
-COPY default-password.xml /etc/clickhouse-server/config.d/default_password.xml
+COPY default-password.xml /etc/clickhouse-server/users.d/default-password.xml
 
 COPY macros2.xml /etc/clickhouse-server/config.d/macros.xml
 
